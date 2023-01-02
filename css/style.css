@@ -72,7 +72,7 @@ html,body{
     bottom: var(--gap-padrao);
 }
 .grupo-inputs div{
-    background: url(/images/icon-note.svg);
+    background: url(images/icon-note.svg);
     background-size: 16px;
     background-position: 10px;
     background-repeat: no-repeat;
@@ -186,13 +186,13 @@ footer a:first-of-type{
     height: 48px;
     margin: 5px;
     border-radius: 50%;
-    background: url(/images/linkedIn-normal.svg);
+    background: url(images/linkedIn-normal.svg);
     background-size: 100%;
     background-position: center;
     transition: all .5s;
 }
 footer a:first-of-type:hover{
-    background: url(/images/linkedIn-hover.svg);
+    background: url(images/linkedIn-hover.svg);
     background-size: 135%;
     background-position: center;
     box-shadow: 0 0 10px var(--cor-highlight);
@@ -205,14 +205,14 @@ footer a:last-of-type{
     height: 48px;
     margin: 5px;
     border-radius: 50%;
-    background: url(/images/github-normal.svg);
+    background: url(images/github-normal.svg);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     transition: all .5s;
 }
 footer a:last-of-type:hover{
-    background: url(/images/github-hover.svg);
+    background: url(images/github-hover.svg);
     background-size: 150%;
     background-position: center;
     background-repeat: no-repeat;
@@ -323,21 +323,3 @@ footer a:last-of-type:hover{
     --gap-padrao: 2rem;
 
 }
-
-/*
-:root{
-    --cor-branco: #FFF;
-    --cor-texto-padrão: #343a40;
-    --cor-texto-claro: #676767;
-    --cor-principal: #0a3871;
-    --cor-principal-hover: #072850;
-    --cor-secundaria: #d8dfe8;
-    --cor-secundaria-hover: #b8cbe4;
-    --cor-fundo: #f3f5fc;
-    --cor-sombra: #00000014;
-    --cor-botao-claro: #d8dfe8;
-    --gap-padrao: 2rem;
-
-}
-
-*/
