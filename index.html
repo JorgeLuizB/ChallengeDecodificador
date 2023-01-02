@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+
+    <title>Oracle ONE - Decodificador de Textos</title>
+</head>
+<body>
+    
+    <main class="principal">
+        <section class="secao-principal">
+            <section class="conteudo-principal">
+                <header>
+                    <a href=""><img src="/images/alura-logo.svg" alt="link do site"></a>
+                </header>
+
+                <div class="caixa-txt">
+                    <textarea class="caixa-txt-elemento" placeholder="Digite seu texto..." ></textarea>
+                </div>
+                <div class="grupo-inputs">
+                    <div>
+                        <!--<img src="/images/icon-note.svg" alt="Icone de importante">--> 
+                        <p>Apenas letras minúsculas e sem acento.</p>
+                    </div>
+                    <input type="button" value="Criptografar" class="botao criptografar" onclick="criptografaTexto()">
+                    <input class="botao" type="button" value="Descriptografar" onclick="descriptografaTexto()">
+                </div>
+            </section>
+
+            <aside class="conteudo-lateral">
+                <div class="conteudo">
+                    <img src="/images/img-no-msg.svg" class="img-texto-vazio" alt="Imagem que informa a ausência de mensagem">
+                    <textarea id="texto-resultado" readonly></textarea>
+                    <h1 class="texto-titulo">Nenhuma mensagem encontrada</h1>
+                    <p class="texto-info">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <div class="copiar-container">
+                    <input type="button" value="Copiar" class="botao copiar-btn" onclick="copiaTexto()">
+                </div>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>Feito por Jorge Luiz Barbosa - Oracle ONE</p>
+        <div>
+            <a href="https://github.com/JorgeLuizB"></a>     
+            <a href="https://www.linkedin.com/in/jorge-luiz-dev/"></a>
+        </div>
+        
+    </footer>
+    <script src="/js/app.js"></script>
+</body>
+</html>
