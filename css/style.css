@@ -6,8 +6,7 @@ html,body{
     width: 100%;
     height: 100%;
     color: var(--color-background);
-    background: var(--color-background-secondary);
-    
+    background: var(--color-background-secondary);  
 }
 .principal{
     width: 100%;
@@ -15,7 +14,6 @@ html,body{
     box-sizing: border-box;
     padding: var(--gap-standard);
     background: linear-gradient(to top, var(--color-background), var(--color-background));
-
 }
 .main-section{
     display: flex;
@@ -26,21 +24,18 @@ html,body{
 }
 .principal-content{
     width: 692.5px;
-
 }
 .principal-content header{
     height: 100px;
     margin-bottom: 1rem;
     box-sizing: border-box;
     padding: 1rem;
-    
 }
 .principal-content a{
     position: relative;
     left: -100px;
 }
 .txt-box{
-    /*border: 1px solid red;*/
     height: 70%;
 }
 .txt-box-element{
@@ -57,9 +52,7 @@ html,body{
     border-radius: 24px;
     padding: calc(var(--gap-standard)/2);
     box-sizing: border-box;
-    
 }
-
 .txt-box-element:focus{
     outline-style: solid;
 }
@@ -102,15 +95,14 @@ html,body{
     background: var(--color-highlight);
     color: var(--color-background);
     transition: all .3s;
-
 }
-.input-group .encrypt-btn{
+.encrypt-btn{
     background-color: var(--color-highlight);
     color: var(--color-background);
     margin-right: calc(var(--gap-standard)/2);
     transition: all .5s;
 }
-.input-group .encrypt-btn:hover{
+.encrypt-btn:hover{
     background-color: var(--color-btn-secondary);
     border-color: var(--color-highlight);
     color: var(--color-highlight);
@@ -162,7 +154,6 @@ html,body{
     margin: 0 auto;
     display: none;
     background-color: var(--color-background);
-
 }
 .copy-btn:hover{
     border-color: var(--color-background);
@@ -174,7 +165,6 @@ footer{
     color: var(--color-highlight);
     padding: var(--gap-standard);
     border-top: 5px solid var(--color-highlight);
-    
 }
 footer div{
     padding: var(--gap-standard);
@@ -199,7 +189,6 @@ footer a:first-of-type:hover{
     box-shadow: 0 0 10px var(--color-highlight);
     transition: all .3s;
 }
-
 footer a:last-of-type{
     display: block;
     width: 48px;
@@ -220,8 +209,6 @@ footer a:last-of-type:hover{
     box-shadow: 0 0 10px var(--color-highlight);
     transition: all .3s;
 }
-
-
 @media screen and (max-width:767.9px) {
     .principal{
         height: fit-content;
@@ -247,7 +234,7 @@ footer a:last-of-type:hover{
     .btn-general{
         width: 100%;
     }
-    .input-group .encrypt-btn{
+    .encrypt-btn{
         margin-right: 0;
     }
     .aside-content{
@@ -271,11 +258,8 @@ footer a:last-of-type:hover{
     }
     footer{
         height: fit-content;
-        
-        
     }
 }
-
 @media screen and (min-width:768px) and (max-width: 1023px){
     .principal{
         height: fit-content;
@@ -320,17 +304,14 @@ footer a:last-of-type:hover{
         position:static;
         width: auto;
         margin-top: 2rem;
-        
     }
     .copy-btn{
         margin: 0 auto;
     }
 }
-
 @media screen and (min-width:1024px) and (max-width:1279px){
     .principal-content{
         width: 65%;
-    
     }
     .principal-content header{
         height: 60px;
@@ -369,7 +350,6 @@ footer a:last-of-type:hover{
         left: 0;
     } 
 }
-
 :root{
     --color-highlight: #06f3af;
     --color-background: #070c15;
@@ -377,5 +357,4 @@ footer a:last-of-type:hover{
     --color-shadow: #06f3af33;
     --color-btn-secondary: transparent;
     --gap-standard: 2rem;
-
 }
