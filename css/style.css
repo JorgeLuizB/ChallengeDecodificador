@@ -186,13 +186,13 @@ footer a:first-of-type{
     height: 48px;
     margin: 5px;
     border-radius: 50%;
-    background: url(../images/linkedIn-normal.svg);
+    background: url(../images/github-normal.svg);
     background-size: 100%;
     background-position: center;
     transition: all .5s;
 }
 footer a:first-of-type:hover{
-    background: url(../images/linkedIn-hover.svg);
+    background: url(../images/github-hover.svg);
     background-size: 135%;
     background-position: center;
     box-shadow: 0 0 10px var(--cor-highlight);
@@ -205,14 +205,14 @@ footer a:last-of-type{
     height: 48px;
     margin: 5px;
     border-radius: 50%;
-    background: url(../images/github-normal.svg);
+    background: url(../images/linkedIn-normal.svg);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     transition: all .5s;
 }
 footer a:last-of-type:hover{
-    background: url(../images/github-hover.svg);
+    background: url(../images/linkedIn-hover.svg);
     background-size: 150%;
     background-position: center;
     background-repeat: no-repeat;
