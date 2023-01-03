@@ -57,7 +57,7 @@ function exibeTextoCriptografado(texto){
     contLateral.style.display = 'block'
     contLateralMsg.style.height = '85%';
     campoTexto.innerText = texto;
-    if(window.innerWidth <= 1200){
+    if(window.innerWidth <= 1000){
         campoTexto.style.height = campoTexto.scrollHeight + 'px';
     }
 }

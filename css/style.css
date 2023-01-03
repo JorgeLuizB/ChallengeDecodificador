@@ -71,8 +71,8 @@ html,body{
     position: absolute;
     bottom: var(--gap-padrao);
 }
-.grupo-inputs div{
-    background: url(images/icon-note.svg);
+.info{
+    background: url(../images/icon-note.svg);
     background-size: 16px;
     background-position: 10px;
     background-repeat: no-repeat;
@@ -186,13 +186,13 @@ footer a:first-of-type{
     height: 48px;
     margin: 5px;
     border-radius: 50%;
-    background: url(images/linkedIn-normal.svg);
+    background: url(../images/linkedIn-normal.svg);
     background-size: 100%;
     background-position: center;
     transition: all .5s;
 }
 footer a:first-of-type:hover{
-    background: url(images/linkedIn-hover.svg);
+    background: url(../images/linkedIn-hover.svg);
     background-size: 135%;
     background-position: center;
     box-shadow: 0 0 10px var(--cor-highlight);
@@ -205,14 +205,14 @@ footer a:last-of-type{
     height: 48px;
     margin: 5px;
     border-radius: 50%;
-    background: url(images/github-normal.svg);
+    background: url(../images/github-normal.svg);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     transition: all .5s;
 }
 footer a:last-of-type:hover{
-    background: url(images/github-hover.svg);
+    background: url(../images/github-hover.svg);
     background-size: 150%;
     background-position: center;
     background-repeat: no-repeat;
@@ -275,7 +275,7 @@ footer a:last-of-type:hover{
     }
 }
 
-@media screen and (min-width:768px) and (max-width: 1200px){
+@media screen and (min-width:768px) and (max-width: 1023px){
     .principal{
         height: fit-content;
     }
@@ -312,6 +312,49 @@ footer a:last-of-type:hover{
         margin-top: 2rem;
         width: 100%;
     }
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px){
+    .conteudo-principal{
+        width: 65%;
+    
+    }
+    .conteudo-principal header{
+        height: 60px;
+    }
+    .principal a{
+        left: 0;
+    }
+    .caixa-txt{
+        height: 60%;
+    }
+    .grupo-inputs{
+        width: 61.5%;
+    }
+    .botao{
+        width: calc(340px - (var(--gap-padrao) * 2));
+    }
+    .conteudo-lateral{
+        width: 350px;
+        padding: 0;
+    }
+    .conteudo textarea:first-of-type{
+        margin: 1rem auto;
+        width: calc(100% - 2rem);
+        height: 90%;
+    }
+    .grupo-inputs :not(.info, p){
+        display: flex;
+        justify-content: center;
+    }
+    .info{
+        padding-left: 4rem;
+    }
+}
+@media screen and (min-width:1280px) and (max-width: 1300px){
+    .conteudo-principal a{
+        left: 0;
+    } 
 }
 
 :root{
