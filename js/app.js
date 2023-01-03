@@ -1,88 +1,89 @@
-
-let textoDigitado = document.querySelector('.caixa-txt-elemento');
-textoDigitado.addEventListener('focus',() => {
-        document.querySelector('.caixa-txt-elemento').value = '';
+let txtTyped = document.querySelector('.txt-box-element');
+txtTyped.addEventListener('focus',() => {
+        document.querySelector('.txt-box-element').value = '';
     }
 )
 
-function criptografaTexto(){
-    textoDigitado = document.querySelector('.caixa-txt-elemento');
-    textoDigitado = textoDigitado.value;
-    textoDigitado = textoDigitado.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-
-    if(textoDigitado == ''){
-        textoDigitado.focus();
+function encryptText(){
+    txtTyped = document.querySelector('.txt-box-element');
+    if(txtTyped.value == ''){
+        txtTyped.focus();
     } else{
-        let textoCriptografado = '';
-
-        textoDigitado = textoDigitado.toLowerCase();
-        for(let i = 0; i < textoDigitado.length; i++){
-            switch(textoDigitado[i]){
+        let txtEncrypted = '';
+        txtTyped = txtTyped.value;
+        txtTyped = txtTyped.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+        txtTyped = txtTyped.toLowerCase();
+        for(let i = 0; i < txtTyped.length; i++){
+            switch(txtTyped[i]){
                 case 'a':
-                    textoCriptografado += textoDigitado[i].replace('a','ai');
+                    txtEncrypted += txtTyped[i].replace('a','ai');
                     break;
                 case 'e':
-                    textoCriptografado += textoDigitado[i].replace('e','enter');
+                    txtEncrypted += txtTyped[i].replace('e','enter');
                     break;
                 case 'i':
-                    textoCriptografado += textoDigitado[i].replace('i','imes');
+                    txtEncrypted += txtTyped[i].replace('i','imes');
                     break;
                 case 'o':
-                    textoCriptografado += textoDigitado[i].replace('o','ober');
+                    txtEncrypted += txtTyped[i].replace('o','ober');
                     break;
                 case 'u':
-                    textoCriptografado += textoDigitado[i].replace('u','ufat');
+                    txtEncrypted += txtTyped[i].replace('u','ufat');
                     break;
                 default:
-                    textoCriptografado += textoDigitado[i];    
+                    txtEncrypted += txtTyped[i];    
             }   
         }
-        exibeTextoCriptografado(textoCriptografado);
+        ShowEncryptedText(txtEncrypted);
     }
 }
-function exibeTextoCriptografado(texto){
-    campoTexto = document.getElementById('texto-resultado');
-    let botaoCopia = document.querySelector('.copiar-btn');
-    let imagemVazio = document.querySelector('.img-texto-vazio');
-    let TextoInfo = document.querySelector('.texto-info');
-    let TextoTitulo = document.querySelector('.texto-titulo');
-    let contLateral = document.querySelector('.conteudo-lateral');
-    let contLateralMsg = document.querySelector('.conteudo');
 
-    campoTexto.style.display = 'block';
-    botaoCopia.style.display = 'block';
-    imagemVazio.style.display = 'none';
-    TextoInfo.style.display = 'none';
-    TextoTitulo.style.display = 'none';
-    contLateral.style.display = 'block'
-    contLateralMsg.style.height = '85%';
-    campoTexto.innerText = texto;
-    if(window.innerWidth <= 1000){
-        campoTexto.style.height = campoTexto.scrollHeight + 'px';
-    }
-}
-function descriptografaTexto(){
-    textoDigitado = document.querySelector('.caixa-txt-elemento');
-    if(textoDigitado.value == ''){
-        textoDigitado.focus();
+function decryptText(){
+    txtTyped = document.querySelector('.txt-box-element');
+    if(txtTyped.value == ''){
+        txtTyped.focus();
     } else{
-        let textoDescriptografado = '';
-        textoDigitado = (textoDigitado.value).toLowerCase();
-        textoDescriptografado = textoDigitado;
-        textoDescriptografado = textoDescriptografado.replaceAll('ai','a'); 
-        textoDescriptografado = textoDescriptografado.replaceAll('enter','e'); 
-        textoDescriptografado = textoDescriptografado.replaceAll('imes','i');
-        textoDescriptografado = textoDescriptografado.replaceAll('ober','o'); 
-        textoDescriptografado = textoDescriptografado.replaceAll('ufat','u'); 
-        exibeTextoCriptografado(textoDescriptografado);
+        let txtDecrypted = '';
+        txtTyped = (txtTyped.value).toLowerCase();
+        txtDecrypted = txtTyped;
+        txtDecrypted = txtDecrypted.replaceAll('ai','a'); 
+        txtDecrypted = txtDecrypted.replaceAll('enter','e'); 
+        txtDecrypted = txtDecrypted.replaceAll('imes','i');
+        txtDecrypted = txtDecrypted.replaceAll('ober','o'); 
+        txtDecrypted = txtDecrypted.replaceAll('ufat','u'); 
+        ShowEncryptedText(txtDecrypted);
     }
 }
 
-function copiaTexto(){
-    let textoCopiado = document.getElementById('texto-resultado');
-    
-    //Para copiar no celular (só funciona com textarea e input text):
-    textoCopiado.select();
-    textoCopiado.setSelectionRange(0,99999);
-    navigator.clipboard.writeText(textoCopiado.value);
+function copyText(){
+    let txtCopied = document.getElementById('txt-result');
+    txtCopied.select();
+    txtCopied.setSelectionRange(0,99999);
+    navigator.clipboard.writeText(txtCopied.value);
+}
+
+function ShowEncryptedText(txt){
+    let fieldTextResult = document.getElementById('txt-result');
+    let copyBtn = document.querySelector('.copy-btn');
+    let imgInfo = document.querySelector('.img-txt-info');
+    let txtInfo = document.querySelector('.txt-info');
+    let txtTitle = document.querySelector('.txt-title');
+    let asideElement = document.querySelector('.aside-content');
+    let asideElementContent = document.querySelector('.content');
+    fieldTextResult.style.display = 'block';
+    copyBtn.style.display = 'block';
+    imgInfo.style.display = 'none';
+    txtInfo.style.display = 'none';
+    txtTitle.style.display = 'none';
+    asideElement.style.display = 'block'
+    asideElementContent.style.height = '85%';
+    fieldTextResult.innerText = txt;
+    changeHeight();
+}
+
+function changeHeight(){
+    let fieldTextResult = document.getElementById('txt-result');
+    if(window.innerWidth <= 1000){
+        fieldTextResult.style.height = fieldTextResult.scrollHeight + 'px';
+    }
 }

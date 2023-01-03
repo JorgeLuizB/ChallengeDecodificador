@@ -13,36 +13,36 @@
 <body>
     
     <main class="principal">
-        <section class="secao-principal">
-            <section class="conteudo-principal">
+        <section class="main-section">
+            <section class="principal-content">
                 <header>
-                    <a href=""><img src="images/alura-logo.svg" alt="link do site"></a>
+                    <a href="https://www.alura.com.br/"><img src="images/alura-logo.svg" alt="link do site"></a>
                 </header>
 
-                <div class="caixa-txt">
-                    <textarea class="caixa-txt-elemento" placeholder="Digite seu texto..." ></textarea>
+                <div class="txt-box">
+                    <textarea class="txt-box-element" placeholder="Digite seu texto..." ></textarea>
                 </div>
-                <div class="grupo-inputs">
+                <div class="input-group">
                     <div class="info">
                         <!--<img src="/images/icon-note.svg" alt="Icone de importante">--> 
                         <p>Apenas letras minúsculas e sem acento.</p>
                     </div>
                     <div>
-                        <input type="button" value="Criptografar" class="botao criptografar" onclick="criptografaTexto()">
-                        <input class="botao" type="button" value="Descriptografar" onclick="descriptografaTexto()">
+                        <input type="button" value="Criptografar" class="btn-general encrypt-btn" onclick="encryptText()">
+                        <input class="btn-general" type="button" value="Descriptografar" onclick="decryptText()">
                     </div>
                 </div>
             </section>
 
-            <aside class="conteudo-lateral">
-                <div class="conteudo">
-                    <img src="images/img-no-msg.svg" class="img-texto-vazio" alt="Imagem que informa a ausência de mensagem">
-                    <textarea id="texto-resultado" readonly></textarea>
-                    <h1 class="texto-titulo">Nenhuma mensagem encontrada</h1>
-                    <p class="texto-info">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <aside class="aside-content">
+                <div class="content">
+                    <img src="images/img-txt-info.svg" class="img-txt-info" alt="Imagem que informa a ausência de mensagem">
+                    <textarea id="txt-result" readonly></textarea>
+                    <h1 class="txt-title">Nenhuma mensagem encontrada</h1>
+                    <p class="txt-info">Digite um texto que você deseja criptografar ou descriptografar.</p>
                 </div>
-                <div class="copiar-container">
-                    <input type="button" value="Copiar" class="botao copiar-btn" onclick="copiaTexto()">
+                <div class="copy-container">
+                    <input type="button" value="Copiar" class="btn-general copy-btn" onclick="copyText()">
                 </div>
             </aside>
         </section>

@@ -5,45 +5,45 @@ body{
 html,body{
     width: 100%;
     height: 100%;
-    color: var(--cor-fundo);
-    background: var(--cor-fundo-secundario);
+    color: var(--color-background);
+    background: var(--color-background-secondary);
     
 }
 .principal{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding: var(--gap-padrao);
-    background: linear-gradient(to top, var(--cor-fundo), var(--cor-fundo));
+    padding: var(--gap-standard);
+    background: linear-gradient(to top, var(--color-background), var(--color-background));
 
 }
-.secao-principal{
+.main-section{
     display: flex;
     height: 100%;
     justify-content: center;
-    gap: var(--gap-padrao);
+    gap: var(--gap-standard);
     position: relative;
 }
-.conteudo-principal{
+.principal-content{
     width: 692.5px;
 
 }
-.conteudo-principal header{
+.principal-content header{
     height: 100px;
     margin-bottom: 1rem;
     box-sizing: border-box;
     padding: 1rem;
     
 }
-.conteudo-principal a{
+.principal-content a{
     position: relative;
     left: -100px;
 }
-.caixa-txt{
+.txt-box{
     /*border: 1px solid red;*/
     height: 70%;
 }
-.caixa-txt-elemento{
+.txt-box-element{
     display: block;
     width: 100%;
     background: transparent;
@@ -52,94 +52,95 @@ html,body{
     height: 100%;
     font-size: 32px;
     line-height: 48px;
-    color: var(--cor-highlight);
-    outline-color: var(--cor-highlight);
+    color: var(--color-highlight);
+    outline-color: var(--color-highlight);
     border-radius: 24px;
-    padding: calc(var(--gap-padrao)/2);
+    padding: calc(var(--gap-standard)/2);
     box-sizing: border-box;
     
 }
-.caixa-txt-elemento:focus{
+
+.txt-box-element:focus{
     outline-style: solid;
 }
-.caixa-txt-elemento::placeholder{
-    color: var(--cor-highlight);
+.txt-box-element::placeholder{
+    color: var(--color-highlight);
 }
-.grupo-inputs{
+.input-group{
     width: fit-content;
     margin: 0 auto;
     position: absolute;
-    bottom: var(--gap-padrao);
+    bottom: var(--gap-standard);
 }
 .info{
     background: url(../images/icon-note.svg);
     background-size: 16px;
     background-position: 10px;
     background-repeat: no-repeat;
-    padding-left: var(--gap-padrao);
+    padding-left: var(--gap-standard);
 }
-.grupo-inputs p{
+.input-group p{
     font-size: 12px; 
     line-height: 18px;
-    color: var(--cor-highlight);
+    color: var(--color-highlight);
 }
-.botao{
-    width: calc(400px - (var(--gap-padrao) * 2));
+.btn-general{
+    width: calc(400px - (var(--gap-standard) * 2));
     height: 67px;
-    background-color: var(--cor-botao-secundario);
-    border: 1px solid var(--cor-highlight);
+    background-color: var(--color-btn-secondary);
+    border: 1px solid var(--color-highlight);
     border-radius: 24px;
     font-size: 16px;
     font-weight: 400;
     font-family: "Inter",sans-serif;
-    color: var(--cor-highlight);
+    color: var(--color-highlight);
     margin-top: 1rem;
     transition: all .5s;
     cursor: pointer;
 }
-.botao:hover{
-    background: var(--cor-highlight);
-    color: var(--cor-fundo);
+.btn-general:hover{
+    background: var(--color-highlight);
+    color: var(--color-background);
     transition: all .3s;
 
 }
-.grupo-inputs .criptografar{
-    background-color: var(--cor-highlight);
-    color: var(--cor-fundo);
-    margin-right: calc(var(--gap-padrao)/2);
+.input-group .encrypt-btn{
+    background-color: var(--color-highlight);
+    color: var(--color-background);
+    margin-right: calc(var(--gap-standard)/2);
     transition: all .5s;
 }
-.grupo-inputs .criptografar:hover{
-    background-color: var(--cor-botao-secundario);
-    border-color: var(--cor-highlight);
-    color: var(--cor-highlight);
+.input-group .encrypt-btn:hover{
+    background-color: var(--color-btn-secondary);
+    border-color: var(--color-highlight);
+    color: var(--color-highlight);
     font-weight: bold;
     transition: all .3s;
-    box-shadow: 0 0 32px var(--cor-sombra);
+    box-shadow: 0 0 32px var(--color-shadow);
 }
-.conteudo-lateral{
+.aside-content{
     width: 400px;
-    background: var(--cor-highlight);
-    padding: var(--gap-padrao);
+    background: var(--color-highlight);
+    padding: var(--gap-standard);
     box-sizing: border-box;
     text-align: center;
     border-radius: 32px;
-    box-shadow: 0 18px 24px var(--cor-sombra);
+    box-shadow: 0 18px 24px var(--color-shadow);
     display: flex;
     align-items: center;
 }
-.conteudo h1{
+.content h1{
     font-weight: 700;
     font-size: 24px;
     line-height: 28.8px;
 }
-.conteudo p:last-of-type{
+.content p:last-of-type{
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     margin-top: 16px;
 }
-.conteudo textarea:first-of-type{
+.content textarea:first-of-type{
     height: 100%;
     width: calc(400px - 4rem);
     resize: none;
@@ -149,34 +150,34 @@ html,body{
     line-height: 32px;
     background: transparent;
     outline: none;
-    color: var(--cor-fundo);
+    color: var(--color-background);
     padding: 0;
 }
-.copiar-container{
+.copy-container{
     position: absolute;
-    bottom: var(--gap-padrao);
-    width: calc(400px - (var(--gap-padrao) * 2));
+    bottom: var(--gap-standard);
+    width: calc(400px - (var(--gap-standard) * 2));
 }
-.copiar-btn{
+.copy-btn{
     margin: 0 auto;
     display: none;
-    background-color: var(--cor-fundo);
+    background-color: var(--color-background);
 
 }
-.copiar-btn:hover{
-    border-color: var(--cor-fundo);
+.copy-btn:hover{
+    border-color: var(--color-background);
     box-shadow: 0 0 24px #00000033;
 }
 footer{
-    background: var(--cor-fundo-secundario);
+    background: var(--color-background-secondary);
     text-align: center;
-    color: var(--cor-highlight);
-    padding: var(--gap-padrao);
-    border-top: 5px solid var(--cor-highlight);
+    color: var(--color-highlight);
+    padding: var(--gap-standard);
+    border-top: 5px solid var(--color-highlight);
     
 }
 footer div{
-    padding: var(--gap-padrao);
+    padding: var(--gap-standard);
     display: flex;
     justify-content: center;
 }
@@ -195,7 +196,7 @@ footer a:first-of-type:hover{
     background: url(../images/github-hover.svg);
     background-size: 135%;
     background-position: center;
-    box-shadow: 0 0 10px var(--cor-highlight);
+    box-shadow: 0 0 10px var(--color-highlight);
     transition: all .3s;
 }
 
@@ -216,7 +217,7 @@ footer a:last-of-type:hover{
     background-size: 150%;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 0 0 10px var(--cor-highlight);
+    box-shadow: 0 0 10px var(--color-highlight);
     transition: all .3s;
 }
 
@@ -225,48 +226,48 @@ footer a:last-of-type:hover{
     .principal{
         height: fit-content;
     }
-    .secao-principal{
+    .main-section{
         display: block;
         width: 100%;
     }
-    .conteudo-principal{
+    .principal-content{
         width: 100%;
     }
-    .conteudo-principal a{
+    .principal-content a{
         position:static;
     }
-    .caixa-txt-elemento{
+    .txt-box-element{
         width: 100%;
         height: 440px;
     }
-    .grupo-inputs{
+    .input-group{
         width: 100%;
         position: static;
     }
-    .botao{
+    .btn-general{
         width: 100%;
     }
-    .grupo-inputs .criptografar{
+    .input-group .encrypt-btn{
         margin-right: 0;
     }
-    .conteudo-lateral{
-        margin-top: var(--gap-padrao);
+    .aside-content{
+        margin-top: var(--gap-standard);
         width: 100%;
         flex-wrap: wrap;
         box-shadow: none;
     }
-    .img-texto-vazio{
+    .img-txt-info{
         display: none;
     }
-    .conteudo textarea:first-of-type{
+    .content textarea:first-of-type{
         width: 100%;
         outline: none;
         height: auto;
     }
-    .copiar-container{
+    .copy-container{
         width: 100%;
         position:static;
-        margin-top: var(--gap-padrao);
+        margin-top: var(--gap-standard);
     }
     footer{
         height: fit-content;
@@ -279,71 +280,83 @@ footer a:last-of-type:hover{
     .principal{
         height: fit-content;
     }
-    .secao-principal{
+    .main-section{
         flex-wrap: wrap;
     }
-    .conteudo-principal{
+    .principal-content{
         width: 100%;
     
     }
-    .conteudo-principal header{
+    .principal-content header{
         height: 150px;
     }
-    .conteudo-principal a{
+    .principal-content a{
         left: 0;
     }
-    .caixa-txt-elemento{
+    .txt-box-element{
         height: 500px;
         
     }
-    .grupo-inputs{
+    .input-group{
         position: static;
         display: block;
     }
-    .conteudo{
+    .content{
         margin-top: 0;
     }
-    .conteudo img{
+    .content img{
         display: none;
     }
-    .conteudo-lateral{
+    .content textarea:first-of-type{
+        width: 100%;
+    }
+    .aside-content{
         display: block;
         height: fit-content;
         margin-top: 2rem;
         width: 100%;
     }
+    .copy-container {
+        position:static;
+        width: auto;
+        margin-top: 2rem;
+        
+    }
+    .copy-btn{
+        margin: 0 auto;
+    }
 }
 
 @media screen and (min-width:1024px) and (max-width:1279px){
-    .conteudo-principal{
+    .principal-content{
         width: 65%;
     
     }
-    .conteudo-principal header{
+    .principal-content header{
         height: 60px;
     }
     .principal a{
         left: 0;
     }
-    .caixa-txt{
+    .txt-box{
         height: 60%;
     }
-    .grupo-inputs{
+    .input-group{
         width: 61.5%;
     }
-    .botao{
-        width: calc(340px - (var(--gap-padrao) * 2));
+    .btn-general{
+        width: calc(340px - (var(--gap-standard) * 2));
     }
-    .conteudo-lateral{
+    .aside-content{
         width: 350px;
         padding: 0;
     }
-    .conteudo textarea:first-of-type{
+    .content textarea:first-of-type{
         margin: 1rem auto;
         width: calc(100% - 2rem);
         height: 90%;
     }
-    .grupo-inputs :not(.info, p){
+    .input-group :not(.info, p){
         display: flex;
         justify-content: center;
     }
@@ -352,17 +365,17 @@ footer a:last-of-type:hover{
     }
 }
 @media screen and (min-width:1280px) and (max-width: 1300px){
-    .conteudo-principal a{
+    .principal-content a{
         left: 0;
     } 
 }
 
 :root{
-    --cor-highlight: #06f3af;
-    --cor-fundo: #070c15;
-    --cor-fundo-secundario: #070f1d;
-    --cor-sombra: #06f3af33;
-    --cor-botao-secundario: transparent;
-    --gap-padrao: 2rem;
+    --color-highlight: #06f3af;
+    --color-background: #070c15;
+    --color-background-secondary: #070f1d;
+    --color-shadow: #06f3af33;
+    --color-btn-secondary: transparent;
+    --gap-standard: 2rem;
 
 }
