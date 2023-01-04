@@ -157,7 +157,6 @@ html,body{
     background-color: var(--color-background);
 }
 .copy-btn:hover{
-    border-color: var(--color-background);
     box-shadow: 0 0 24px #00000033;
 }
 footer{
