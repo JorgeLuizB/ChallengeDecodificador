@@ -2,7 +2,7 @@
 This is our first challenge in this course.
 #challengeonedecodificador4
 
-![../images/screenshot-pc.png]
+![](../images/screenshot-pc.png)
 
 ### Note
 Our goal is to make a website that encrypt/decrypt a message using the keys:
