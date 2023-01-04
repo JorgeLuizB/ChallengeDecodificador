@@ -153,6 +153,7 @@ html,body{
 .copy-btn{
     margin: 0 auto;
     display: none;
+    border: 1px solid var(--color-background);
     background-color: var(--color-background);
 }
 .copy-btn:hover{
