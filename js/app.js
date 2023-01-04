@@ -34,7 +34,7 @@ function encryptText(){
                     txtEncrypted += txtTyped[i];    
             }   
         }
-        ShowEncryptedText(txtEncrypted);
+        ShowText(txtEncrypted);
     }
 }
 
@@ -51,7 +51,7 @@ function decryptText(){
         txtDecrypted = txtDecrypted.replaceAll('imes','i');
         txtDecrypted = txtDecrypted.replaceAll('ober','o'); 
         txtDecrypted = txtDecrypted.replaceAll('ufat','u'); 
-        ShowEncryptedText(txtDecrypted);
+        ShowText(txtDecrypted);
     }
 }
 
@@ -62,7 +62,7 @@ function copyText(){
     navigator.clipboard.writeText(txtCopied.value);
 }
 
-function ShowEncryptedText(txt){
+function ShowText(txt){
     let fieldTextResult = document.getElementById('txt-result');
     let copyBtn = document.querySelector('.copy-btn');
     let imgInfo = document.querySelector('.img-txt-info');
