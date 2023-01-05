@@ -171,6 +171,10 @@ footer div{
     display: flex;
     justify-content: center;
 }
+footer p:last-of-type{
+    margin-top: 1rem;
+    font-style: italic;
+}
 footer a:first-of-type{
     display: block;
     width: 48px;
