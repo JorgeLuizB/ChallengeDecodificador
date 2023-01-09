@@ -35,4 +35,5 @@ There is no license. feel free to copy and paste as you like.
 ### Inspiration
 This is a challenge made by Alura and Oracle ONE.
 [Alura | Cursos online de tecnologia](https://www.alura.com.br/)
+
 [Oracle | Oracle Next Education](https://www.oracle.com/br/education/oracle-next-education/)
